@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".discount_ps_page">
+
+    <ImageView
+        android:id="@+id/discount_ps_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/discount_ps_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-120dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/card_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discount_ps_header" />
+
+    <EditText
+        android:id="@+id/discount_ps_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/text_input"
+        android:fontFamily="@font/prompt_light"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/discount_ps_card"
+        app:layout_constraintStart_toStartOf="@+id/discount_ps_card"
+        app:layout_constraintTop_toBottomOf="@+id/people_desc" />
+
+    <EditText
+        android:id="@+id/price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/text_input"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/discount_ps_header"
+        app:layout_constraintStart_toStartOf="@+id/discount_ps_header"
+        app:layout_constraintTop_toBottomOf="@+id/discount_ps_price" />
+
+    <ImageButton
+        android:id="@+id/cal_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="@+id/discount_ps_header"
+        app:layout_constraintStart_toStartOf="@+id/discount_ps_header"
+        app:layout_constraintTop_toBottomOf="@+id/discount_ps_value"
+        app:srcCompat="@drawable/cal_btn" />
+
+    <TextView
+        android:id="@+id/discount_ps_cal_btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/prompt_light"
+        android:text="คำนวน"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cal_btn"
+        app:layout_constraintEnd_toEndOf="@+id/cal_btn"
+        app:layout_constraintStart_toStartOf="@+id/cal_btn"
+        app:layout_constraintTop_toBottomOf="@+id/discount_ps_value"
+        app:layout_constraintVertical_bias="0.462" />
+
+    <TextView
+        android:id="@+id/discount_ps_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/prompt_light"
+        android:text="ใส่ราคารวมหรือราคาสินค้า"
+        android:textColor="#464646"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/price_value"
+        app:layout_constraintTop_toBottomOf="@+id/discount_ps_header" />
+
+    <TextView
+        android:id="@+id/people_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/prompt_light"
+        android:text="ใส่จำนวน %"
+        android:textColor="#464646"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/discount_ps_value"
+        app:layout_constraintTop_toBottomOf="@+id/price_value" />
+
+    <TextView
+        android:id="@+id/divide_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/prompt_medium"
+        android:text="หาส่วนลดจาก %"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/discount_ps_header" />
+
+    <TextView
+        android:id="@+id/discount_ps_card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/prompt_medium"
+        android:text="ส่วนลดเท่ากับ"
+        android:textColor="#464646"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/discount_ps_card"
+        app:layout_constraintTop_toTopOf="@+id/discount_ps_card" />
+
+    <TextView
+        android:id="@+id/cal_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/prompt_medium"
+        android:text="0 บาท"
+        android:textColor="#6E3CBC"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/discount_ps_card"
+        app:layout_constraintStart_toStartOf="@+id/discount_ps_card"
+        app:layout_constraintTop_toBottomOf="@+id/discount_ps_card_title" />
+
+    <ImageButton
+        android:id="@+id/discount_ps_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="@+id/discount_ps_header"
+        app:layout_constraintTop_toTopOf="@+id/discount_ps_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

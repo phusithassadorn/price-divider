@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/content_desc_header_cons"
+    tools:context=".MainActivity"
+    tools:ignore="RedundantDescriptionCheck">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/content_desc_header"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <ImageButton
+            android:id="@+id/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_desc_items_1"
+            android:scaleType="center"
+            android:src="@drawable/ic_divide"
+            app:layout_constraintEnd_toStartOf="@+id/discount_ps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/discount_ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_desc_items_2"
+            android:src="@drawable/ic_discount_ps"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divide"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="-30dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_desc_items_3"
+            android:scaleType="center"
+            android:src="@drawable/ic_divide_ps"
+            app:layout_constraintEnd_toStartOf="@+id/divide_ps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divide" />
+
+        <ImageButton
+            android:id="@+id/divide_ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-30dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/content_desc_items_4"
+            android:scaleType="center"
+            android:src="@drawable/ic_discount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/discount"
+            app:layout_constraintTop_toBottomOf="@+id/discount_ps" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="122dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/prompt_medium"
+        android:text="@string/header_title"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/prompt_light"
+        android:text="@string/header_desc"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

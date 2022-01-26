@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">หารตังค์</string>
+    <string name="content_desc_header">header image</string>
+    <string name="content_desc_header_cons">header cons</string>
+    <string name="content_desc_items_1">items menu 1</string>
+    <string name="content_desc_items_2">items menu 2</string>
+    <string name="content_desc_items_3">items menu 3</string>
+    <string name="content_desc_items_4">items menu 4</string>
+    <string name="header_title">หน้าหลัก</string>
+    <string name="header_desc">แตะที่เมนูที่ต้องการ เพื่อคำนวนสิ่งที่ต้องการ</string>
+</resources>
